@@ -1,4 +1,4 @@
-HEDGEhog: BERT-based multi-class uncertainty cues recognition
+🦔 HEDGEhog 🦔: BERT-based multi-class uncertainty cues recognition
 ===========================================================
 
 # Description
