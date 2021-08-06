@@ -1,0 +1,83 @@
+{
+    "bert_default_args": {
+        "train_batch_size": 16,
+        "labels_list": ["C", "D", "E", "I", "N"],
+        "output_dir": "output_bert_default",
+        "best_model_dir": "output_bert_default/best_model",
+        "overwrite_output_dir": true,
+        "wandb_project": "bert-hedgehog",
+        "wandb_kwargs": {"name": "default"},
+        "silent": true,
+        "manual_seed": 19
+    },
+    "scibert_default_args": {
+        "train_batch_size": 16,
+        "labels_list": ["C", "D", "E", "I", "N"],
+        "output_dir": "output_scibert_default",
+        "best_model_dir": "output_scibert_default/best_model",
+        "overwrite_output_dir": true,
+        "wandb_project": "scibert-hedgehog",
+        "wandb_kwargs": {"name": "default"},
+        "silent": true,
+        "manual_seed": 19
+    },
+    "bert_vanilla_args": {
+        "learning_rate": 6e-5,
+        "num_train_epochs": 1,
+        "train_batch_size": 16,
+        "labels_list": ["C", "D", "E", "I", "N"],
+        "output_dir": "output_bert_vanilla",
+        "best_model_dir": "output_bert_vanilla/best_model",
+        "overwrite_output_dir": true,
+        "wandb_project": "bert-hedgehog",
+        "wandb_kwargs": {"name": "vanilla"},
+        "silent": true,
+        "manual_seed": 19
+    },
+    "scibert_vanilla_args": {
+        "learning_rate": 6e-5,
+        "num_train_epochs": 1,
+        "train_batch_size": 16,
+        "labels_list": ["C", "D", "E", "I", "N"],
+        "output_dir": "output_scibert_vanilla",
+        "best_model_dir": "output_scibert_vanilla/best_model",
+        "overwrite_output_dir": true,
+        "wandb_project": "scibert-hedgehog",
+        "wandb_kwargs": {"name": "vanilla"},
+        "silent": true,
+        "manual_seed": 19
+    },
+    "bert_sweep_args": {
+        "train_batch_size": 16,
+        "labels_list": ["C", "D", "E", "I", "N"],
+        "evaluate_during_training": true,
+        "no_save": true,
+        "output_dir": "output_sweep",
+        "best_model_dir": "output_sweep/best_model",
+        "overwrite_output_dir": true,
+        "wandb_project": "bert-hedgehog",
+        "silent": true,
+        "manual_seed": 19
+    },
+    "scibert_sweep_args": {
+        "train_batch_size": 16,
+        "labels_list": ["C", "D", "E", "I", "N"],
+        "evaluate_during_training": true,
+        "no_save": true,
+        "output_dir": "output_sweep",
+        "best_model_dir": "output_sweep/best_model",
+        "overwrite_output_dir": true,
+        "wandb_project": "scibert-hedgehog",
+        "silent": true,
+        "manual_seed": 19
+    },
+    "focused_sweep_config": {
+        "name": "focused_sweep",
+        "method": "grid",
+        "metric": {"name": "eval_loss", "goal": "minimize"},
+        "parameters": {
+            "num_train_epochs": {"values": [1, 2, 3]},
+            "learning_rate": {"values": [1e-5, 2e-5, 3e-5, 4e-5, 5e-5, 6e-5]}
+        }
+    }
+}
