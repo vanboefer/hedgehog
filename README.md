@@ -72,7 +72,7 @@ You can perform a sweep for hyperparameters optimization with the [wandb_sweep.p
 ## Predict
 To use my fine-tuned model for generating predictions on your own data, follow the following steps:
 1. Prepare your data in a pickled DataFrame which contains the column 'sentence'. For each row in the df, the text in 'sentence' will be split on space and a label will be predicted for each token. A list with the predicted labels will be saved in a new column named 'predictions'.
-2. Download the `hedgehog` folder from [here](https://1drv.ms/u/s!AvPkt_QxBozXk7xX29OAFO5JLuftwQ?e=f6ABI0) and place it in the ```models/``` directory. The folder contains the model `pytorch_model.bin` and info about the tokenizer, the vocabulary and the configuration.
+2. Download the `hedgehog` folder from [here](https://1drv.ms/u/s!AvPkt_QxBozXk8Y4aWzTOVoUjcqSVw?e=B6BxPZ) and place it in the ```models/``` directory. The folder contains the model `pytorch_model.bin` and info about the tokenizer, the vocabulary and the configuration.
 3. Run the [predict.py](src/predict.py) script, indicating the path to your pickled data (alternatively, edit the default value in the script):
 ```
 $ python predict.py --data_pkl ../data/mydata.pkl
